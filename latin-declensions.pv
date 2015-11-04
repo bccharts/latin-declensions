@@ -1,0 +1,183 @@
+import re
+import yaml
+
+with open("data.yaml", "r") as f:
+    data = yaml.load(f.read())
+
+# 8.5x11"
+size(data['page']['width'], data['page']['height'])
+
+default_color = '#a74ed5'
+colors = {
+    'blue': '#156eb4',
+    'red': '#d61d67',
+    'purple': '#a74ed5',
+}
+
+font("Minion", size=11)
+background(1)
+
+stylesheet("ending", weight="bold", fill=default_color)
+    
+# Swap out [ending] for <ending>ending</ending>
+def style_line(l):
+    text_line = re.sub(r"\{(.*?)\}", r"<stem>\1</stem>", l)
+    text_line = re.sub(r"\[(.*?)\]", r"<ending>\1</ending>", text_line)
+    return "<w>%s</w>" % text_line
+    
+    
+# Draw the group header ("1st Person", etc.)    
+def draw_group_header(x, y, title, width):
+    push()
+    translate(x, y)
+    
+    # Top rule
+    nofill()
+    pen(0.25)
+    stroke(0.5)
+    line(0, -12, width, -12)
+
+    # Group title
+    font("Museo Sans", size=data['group_header_size'], tracking=15)
+    fill(0.1)
+    text(group['title'].upper(), 0, 0)
+    font(tracking=0)
+    
+    pop()
+
+
+# Draw the side headings    
+def draw_side_headings(x, y, headings):
+    push()
+    
+    translate(x, y + data['side_heading_initial_offset'])
+    
+    font("Minion", size=data['side_heading_size'], sc=True)
+    fill(0.65)
+    
+    for heading in headings:
+        text(heading, data['side_heading_indent'], 0)
+        
+        # Line spacing
+        translate(0, data['side_heading_spacing'])
+
+    fill(0)
+    font(sc=False)    
+    
+    pop()
+
+
+# Draw an individual column
+def draw_column(x, y, column):
+    push()
+    translate(x, y)
+    
+    if 'sample_word' in column and column['sample_word'] != '':
+        stylesheet("sm", sc=True)
+        stylesheet("i", italic=True)
+        font("Minion", size=data['sample_size'], sc=False)
+        fill(0.45)
+        text(0, 0, xml=column['sample_word'])
+
+    translate(0, data['sample_word_spacing'])        
+    
+    font(tracking=data['word_tracking'])
+    fill(0.65)
+    if 'color' in column and column['color'] != '':
+        fill_color = colors[column['color']]
+    else:
+        fill_color = default_color
+    stylesheet("ending", weight="bold", fill=fill_color)
+    
+    # Draw the title
+    if 'title' in column and column['title'] != '':
+        font("Minion", size=data['heading_size'], sc=True)
+        text(column['title'])
+        
+    translate(0, data['title_spacing'])
+    
+    fill(0)
+    
+    # Draw the words
+    font("Minion", size=data['word_size'], sc=False)
+    for case in data['headings']:
+        item = column[case]
+        text(0, 0, xml=style_line(item))
+        translate(0, data['line_spacing'])
+    
+    font(tracking=0)
+    pop()
+    
+    
+# Draw a side
+
+def draw_side(base_x, base_y, group):
+    # Width of group
+    if 'width' in group:
+        width = data['half_width']
+    else:
+        width = data['width']
+        
+    # Draw the group header
+    draw_group_header(base_x, base_y, group['title'], width)
+    
+    # Draw the side headings
+    side_top = base_y + 20
+    if 'side_top' in group:
+        side_top += group['side_top']
+    draw_side_headings(base_x, side_top, data['headings'])
+    
+    # Draw the individual columns
+    col_x = base_x + data['side_heading_offset']
+    for index, column in enumerate(group['data']):
+        if 'sample_word' in column and column['sample_word'] != '':
+            # Space it out (sample word = new group)
+            col_x += data['subgroup_spacing']
+            
+        draw_column(col_x, base_y + 18, column)
+        col_x += data['column_spacing']
+
+
+
+# Heading
+font("Museo Sans", size=14, tracking=15)
+text("Latin {}".format(data['label']).upper(), data['margin'], data['margin'] + 10)
+
+# Heading metadata
+align(RIGHT)
+font("Minion", size=9, italic=True, tracking=0)
+stroke(0)
+fill(0.5)
+text("bencrowder.net • Last modified {}".format(data['updated']), data['page']['width'] - data['margin'], data['margin'] + 10)
+font(italic=False)
+
+align(LEFT)
+pen(0.5)
+
+
+# Draw left side
+
+base_y = data['margin'] + 50
+for index, row in enumerate(data['left_rows']):
+    base_x = data['margin']
+    for group in row['groups']:
+        draw_side(base_x, base_y, group)
+        
+        base_x += data['group_spacing_x']
+        
+    base_y += data['group_spacing_y']
+    
+# Draw right side
+
+base_y = data['margin'] + 50
+for index, row in enumerate(data['right_rows']):
+    base_x = 420
+    for group in row['groups']:
+        draw_side(base_x, base_y, group)
+        
+        base_x += data['group_spacing_x']
+        
+    base_y += data['group_spacing_y']
+
+
+export(data['output'])
