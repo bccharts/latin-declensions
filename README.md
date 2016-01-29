@@ -17,3 +17,5 @@ To modify the order of the cases, just change the headings setting in `data.yaml
 - Add it to the headings setting
 - Add it to the declension data (same format as the others)
 - Tweak spacing as necessary
+
+To switch to the alternate version in this repo, edit line 4 of `latin-declensions.pv` to point to `data-vocative.yaml` instead of `data.yaml`, then rerun the script in PlotDevice.
