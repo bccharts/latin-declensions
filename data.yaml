@@ -1,6 +1,6 @@
 label: Declensions
 output: latin-declensions.pdf
-updated: 4 November 2015
+updated: 17 May 2016
 
 page:
   width: 792
@@ -160,7 +160,7 @@ right_rows:
   - groups:
     - title: 4th Declension
       data:
-        - color: red 
+        - color: blue
           sample_word: frūctus, -ūs, <sm>m.</sm> <i>fruit</i> 
           title: singular 
           nom: frūct[us] 
