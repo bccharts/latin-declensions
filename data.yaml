@@ -1,6 +1,6 @@
 label: Declensions
 output: latin-declensions.pdf
-updated: 17 May 2016
+updated: 16 June 2016
 
 page:
   width: 792
@@ -50,176 +50,176 @@ left_rows:
           dat: aqu[ae]
           acc: aqu[am]
           abl: aqu[ā]
-        - color: red 
-          title: plural 
-          nom: aqu[ae] 
-          gen: aqu[ārum] 
-          dat: aqu[īs] 
-          acc: aqu[ās] 
+        - color: red
+          title: plural
+          nom: aqu[ae]
+          gen: aqu[ārum]
+          dat: aqu[īs]
+          acc: aqu[ās]
           abl: aqu[īs]
   - groups:
     - title: 2nd Declension
       data:
-        - color: blue 
-          sample_word: servus, -ī, <sm>m.</sm> <i>slave</i> 
-          title: singular 
-          nom: serv[us] 
-          gen: serv[ī] 
-          dat: serv[ō] 
-          acc: serv[um] 
+        - color: blue
+          sample_word: servus, -ī, <sm>m.</sm> <i>slave</i>
+          title: singular
+          nom: serv[us]
+          gen: serv[ī]
+          dat: serv[ō]
+          acc: serv[um]
           abl: serv[ō]
-        - color: blue 
-          title: plural 
-          nom: serv[ī] 
-          gen: serv[ōrum] 
-          dat: serv[īs] 
-          acc: serv[ōs] 
+        - color: blue
+          title: plural
+          nom: serv[ī]
+          gen: serv[ōrum]
+          dat: serv[īs]
+          acc: serv[ōs]
           abl: serv[īs]
-        - color: purple 
-          sample_word: dōnum, -ī, <sm>n.</sm> <i>gift</i> 
-          title: singular 
-          nom: dōn[um] 
-          gen: dōn[ī] 
-          dat: dōn[ō] 
-          acc: dōn[um] 
+        - color: purple
+          sample_word: dōnum, -ī, <sm>n.</sm> <i>gift</i>
+          title: singular
+          nom: dōn[um]
+          gen: dōn[ī]
+          dat: dōn[ō]
+          acc: dōn[um]
           abl: dōn[ō]
-        - color: purple 
-          title: plural 
-          nom: dōn[a] 
-          gen: dōn[ōrum] 
-          dat: dōn[īs] 
-          acc: dōn[a] 
+        - color: purple
+          title: plural
+          nom: dōn[a]
+          gen: dōn[ōrum]
+          dat: dōn[īs]
+          acc: dōn[a]
           abl: dōn[īs]
   - groups:
     - title: 3rd Declension
       data:
-        - color: blue 
-          sample_word: rēx, rēgis, <sm>m.</sm> <i>king</i> 
-          title: singular 
-          nom: rēx 
-          gen: rēg[is] 
-          dat: rēg[ī] 
-          acc: rēg[em] 
+        - color: blue
+          sample_word: rēx, rēgis, <sm>m.</sm> <i>king</i>
+          title: singular
+          nom: rēx
+          gen: rēg[is]
+          dat: rēg[ī]
+          acc: rēg[em]
           abl: rēg[e]
-        - color: blue 
-          title: plural 
-          nom: rēg[ēs] 
-          gen: rēg[um] 
-          dat: rēg[ibus] 
-          acc: rēg[ēs] 
+        - color: blue
+          title: plural
+          nom: rēg[ēs]
+          gen: rēg[um]
+          dat: rēg[ibus]
+          acc: rēg[ēs]
           abl: rēg[ibus]
-        - color: purple 
-          sample_word: corpus, corporis, <sm>n.</sm> <i>body</i> 
-          title: singular 
-          nom: corpus 
-          gen: corpor[is] 
-          dat: corpor[ī] 
-          acc: corpus 
+        - color: purple
+          sample_word: corpus, corporis, <sm>n.</sm> <i>body</i>
+          title: singular
+          nom: corpus
+          gen: corpor[is]
+          dat: corpor[ī]
+          acc: corpus
           abl: corpor[e]
-        - color: purple 
-          title: plural 
-          nom: corpor[a] 
-          gen: corpor[um] 
-          dat: corpor[ibus] 
-          acc: corpor[a] 
+        - color: purple
+          title: plural
+          nom: corpor[a]
+          gen: corpor[um]
+          dat: corpor[ibus]
+          acc: corpor[a]
           abl: corpor[ibus]
 right_rows:
   - groups:
     - title: 3rd Declension i-stem
       data:
-        - color: blue 
-          sample_word: cīvis, -is, <sm>m.</sm> <i>citizen</i> 
-          title: singular 
-          nom: cīv[is] 
-          gen: cīv[is] 
-          dat: cīv[ī] 
-          acc: cīv[em] 
+        - color: blue
+          sample_word: cīvis, -is, <sm>m.</sm> <i>citizen</i>
+          title: singular
+          nom: cīv[is]
+          gen: cīv[is]
+          dat: cīv[ī]
+          acc: cīv[em]
           abl: cīv[e]
-        - color: blue 
-          title: plural 
-          nom: cīv[ēs] 
-          gen: cīv[ium] 
-          dat: cīv[ibus] 
-          acc: cīv[ēs] 
+        - color: blue
+          title: plural
+          nom: cīv[ēs]
+          gen: cīv[ium]
+          dat: cīv[ibus]
+          acc: cīv[ēs]
           abl: cīv[ibus]
-        - color: purple 
-          sample_word: mare, -is, <sm>n.</sm> <i>sea</i> 
-          title: singular 
-          nom: mar[e] 
-          gen: mar[is] 
-          dat: mar[ī] 
-          acc: mar[e] 
-          abl: mar[i]
-        - color: purple 
-          title: plural 
-          nom: mar[ia] 
-          gen: mar[ium] 
-          dat: mar[ibus] 
-          acc: mar[ia] 
+        - color: purple
+          sample_word: mare, -is, <sm>n.</sm> <i>sea</i>
+          title: singular
+          nom: mar[e]
+          gen: mar[is]
+          dat: mar[ī]
+          acc: mar[e]
+          abl: mar[ī] 
+        - color: purple
+          title: plural
+          nom: mar[ia]
+          gen: mar[ium]
+          dat: mar[ibus]
+          acc: mar[ia]
           abl: mar[ibus]
   - groups:
     - title: 4th Declension
       data:
         - color: blue
-          sample_word: frūctus, -ūs, <sm>m.</sm> <i>fruit</i> 
-          title: singular 
-          nom: frūct[us] 
-          gen: frūct[ūs] 
-          dat: frūct[uī] 
-          acc: frūct[um] 
+          sample_word: frūctus, -ūs, <sm>m.</sm> <i>fruit</i>
+          title: singular
+          nom: frūct[us]
+          gen: frūct[ūs]
+          dat: frūct[uī]
+          acc: frūct[um]
           abl: frūct[ū]
         - color: blue
-          title: plural 
-          nom: frūct[ūs] 
-          gen: frūct[uum] 
-          dat: frūct[ibus] 
-          acc: frūct[ūs] 
+          title: plural
+          nom: frūct[ūs]
+          gen: frūct[uum]
+          dat: frūct[ibus]
+          acc: frūct[ūs]
           abl: frūct[ibus]
-        - color: purple 
-          sample_word: cornū, -ūs, <sm>n.</sm> <i>horn</i> 
-          title: singular 
-          nom: corn[ū] 
-          gen: corn[ūs] 
-          dat: corn[ū] 
-          acc: corn[ū] 
+        - color: purple
+          sample_word: cornū, -ūs, <sm>n.</sm> <i>horn</i>
+          title: singular
+          nom: corn[ū]
+          gen: corn[ūs]
+          dat: corn[ū]
+          acc: corn[ū]
           abl: corn[ū]
-        - color: purple 
-          title: plural 
-          nom: corn[ua] 
-          gen: corn[uum] 
-          dat: corn[ibus] 
-          acc: corn[ua] 
+        - color: purple
+          title: plural
+          nom: corn[ua]
+          gen: corn[uum]
+          dat: corn[ibus]
+          acc: corn[ua]
           abl: corn[ibus]
   - groups:
     - title: 5th Declension
       data:
-        - color: red 
-          sample_word: rēs, reī, <sm>f.</sm> <i>thing</i> 
-          title: singular 
-          nom: r[ēs] 
-          gen: r[eī] 
-          dat: r[eī] 
-          acc: r[em] 
+        - color: red
+          sample_word: rēs, reī, <sm>f.</sm> <i>thing</i>
+          title: singular
+          nom: r[ēs]
+          gen: r[eī]
+          dat: r[eī]
+          acc: r[em]
           abl: r[ē]
-        - color: red 
-          title: plural 
-          nom: r[ēs] 
-          gen: r[ērum] 
-          dat: r[ēbus] 
-          acc: r[ēs] 
+        - color: red
+          title: plural
+          nom: r[ēs]
+          gen: r[ērum]
+          dat: r[ēbus]
+          acc: r[ēs]
           abl: r[ēbus]
-        - color: blue 
-          sample_word: diēs, diēī, <sm>m.</sm> <i>day</i> 
-          title: singular 
-          nom: di[ēs] 
-          gen: di[ēī] 
-          dat: di[ēī] 
-          acc: di[em] 
+        - color: blue
+          sample_word: diēs, diēī, <sm>m.</sm> <i>day</i>
+          title: singular
+          nom: di[ēs]
+          gen: di[ēī]
+          dat: di[ēī]
+          acc: di[em]
           abl: di[ē]
-        - color: blue 
-          title: plural 
-          nom: di[ēs] 
-          gen: di[ērum] 
-          dat: di[ēbus] 
-          acc: di[ēs] 
+        - color: blue
+          title: plural
+          nom: di[ēs]
+          gen: di[ērum]
+          dat: di[ēbus]
+          acc: di[ēs]
           abl: di[ēbus]
