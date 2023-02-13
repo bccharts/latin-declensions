@@ -1,3 +1,5 @@
+This version is now defunct, replaced by the HTML/CSS version linked on the [Latin declensions page](https://bencrowder.net/latin-declensions/) on my site.
+
 ## Latin declensions chart
 
 Uses [PlotDevice](http://plotdevice.io).
